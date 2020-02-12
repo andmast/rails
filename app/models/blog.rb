@@ -4,4 +4,6 @@ class Blog < ApplicationRecord
 
   extend FriendlyId
   friendly_id :title, use: [:slugged, :history]
+
+  validates_presence_of :title ,:body
 end
